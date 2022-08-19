@@ -8,7 +8,8 @@
 --vim.g.tokyonight_transparent = true
 --vim.g.tokyonight_transparent_sidebar = true
 --
-local colorscheme = "zellner" 
+local colorscheme = "vscode" 
+--local colorscheme = "zellner" 
 --local colorscheme = "tokyonight" 
 --tokyonight
 --OceanicNext

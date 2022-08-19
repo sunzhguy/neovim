@@ -91,6 +91,7 @@ vim.g.completeopt = "menu,menuone,noslect,noinsert"
 
 --样式
 
+vim.o.background = "light"
 --vim.o.background = "dark"
 --vim.g.tokyonight_style = "storm"
 

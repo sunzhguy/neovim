@@ -50,27 +50,45 @@ sort_by = "case_sensitive",
 
 local status, buffer_line = pcall(require, "bufferline")
 if not status then
-  vim.notify("没有找到 bufferline")
-  return 
+ vim.notify("没有找到 bufferline")
+ return 
 end
 
+
 buffer_line.setup({
-  options = {
+ options = {
+   theme = "vscode",
     -- 关闭 Tab 命令 ，这里使用moll/vim-bbye 的：Bdelete 命令
-    close_command = "Bdelete! %d",
+   close_command = "Bdelete! %d",
     right_mouse_command = "Bdelete! %d",
     --侧边栏配置
     --左侧让出nvim-tree 的位置显示文字File Explorer
     offsets = {
      {
        filetype = "NvimTreee",
-       text = "File Explorer",
+      text = "File Explorer",
        hightlight = "Directory",
        text_align = "left",
      }, 
     },
   }
 })
+
+--buffer_line.setup({
+--    options = {
+--        buffer_close_icon = "",
+--        close_command = "Bdelete %d",
+--        close_icon = "",
+--        indicator_icon = " ",
+--        left_trunc_marker = "",
+--        modified_icon = "●",
+--        offsets = { { filetype = "NvimTree", text = "EXPLORER", text_align = "center" } },
+--        right_mouse_command = "Bdelete! %d",
+--        right_trunc_marker = "",
+--        show_close_icon = false,
+--        show_tab_indicators = true,
+--    },
+--})
 
 local status, lua_line = pcall(require, "lualine")
 if not status then
@@ -80,7 +98,7 @@ end
 
 lua_line.setup({
   options = {
-    theme = "zellner",
+    --theme = "vscode",
     component_separators = { left = "|", right = "|" },
     -- https://github.com/ryanoasis/powerline-extra-symbols
     section_separators = { left = " ", right = "" },
@@ -115,5 +133,35 @@ lua_line.setup({
   },
 })
 
+local color = require("vscode.colors")
+local status, vscode = pcall(require, "vscode")
+if not status then
+  vim.notify("没有找到 vscode")
+  return 
+end
 
+--[[
+vscode.setup({
+   -- Enable transparent background
+    transparent = false,
 
+    -- Enable italic comment
+    italic_comments = true,
+
+    -- Disable nvim-tree background color
+    disable_nvimtree_bg = true,
+
+    -- Override colors (see ./lua/vscode/colors.lua)
+    color_overrides = {
+        vscLineNumber = '#FFFFFF',
+    },
+
+    -- Override highlight groups (see ./lua/vscode/theme.lua)
+    --[[group_overrides = {
+         --this supports the same val table as vim.api.nvim_set_hl
+         --use colors from this colorscheme by requiring vscode.colors!
+         Cursor = { fg=color.vscDarkBlue, bg=color.vscLightGreen, bold=true },
+    }
+
+  })
+  --]]

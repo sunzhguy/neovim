@@ -46,8 +46,8 @@ map("n", "C-d>", "10j", opt)
 
 
 -- magic search
-map("n", "/", "/\\", {noremap = true, silent = false})
-map("v", "/", "/\\", {noremap = true, silent = false})
+map("n", "/", "/\\v", {noremap = true, silent = false})
+map("v", "/", "/\\v", {noremap = true, silent = false})
 
 
 --visual 模式代码缩进

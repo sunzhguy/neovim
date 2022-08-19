@@ -40,7 +40,9 @@ packer.startup({
     -- lualine  底部标签显示
     use({"nvim-lualine/lualine.nvim",requires = {"kyazdani42/nvim-web-devicons"} })
     use("arkav/lualine-lsp-progress")
-
+  
+    -- vscode 主题添加
+    use("Mofiqul/vscode.nvim")
 
   if packer_bootstrap  then
     packer.sync()
