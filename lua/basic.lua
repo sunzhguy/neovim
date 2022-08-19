@@ -120,3 +120,4 @@ vim.o.showtableline = 2
 
 --使用增强转贷插件后不不需要vim 的模式显示
 vim.o.showmode = false
+vim.o.listchars = "trail:•,tab:├─,space:·,eol:⏎"
