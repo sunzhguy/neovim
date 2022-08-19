@@ -60,7 +60,7 @@ map("v", "K", ":move '<-3<CR>gv-gv",opt)
 
 --退出
 map("n", "qq", ":q!<CR>", opt)
-map("n", "<C-q>", ":qa!<CR>", opt)
+--map("n", "<C-q>", ":qa!<CR>", opt)
 
 
 --insert 模式 ，跳到行首/尾
@@ -88,19 +88,18 @@ map("n", "sc", "<C-w>c", opt)
 map("n", "so", "<C-w>o", opt)
 
 --<leader> +hjkl 窗口之间跳转
-map("n", "<C-w>n", "", opt)
-map("n", "<leader>j", "<C-w>j", opt)
-map("n", "<leader>k", "<C-w>k", opt)
-map("n", "<leader>h", "<C-w>h", opt)
-map("n", "<leader>l", "<C-w>l", opt)
+map("n", "<C-w>", "", opt)
+map("n", "<C-j>", "<C-w>j", opt)
+map("n", "<C-k>", "<C-w>k", opt)
+map("n", "<C-h>", "<C-w>h", opt)
+map("n", "<C-l>", "<C-w>l", opt)
 
 
 --左右比例控制
-map("n", "<C-Left>", ":vertical resize -2 <CR>", opt)
-map("n", "<C-Right>", ":vertical resize +2 <CR>", opt)
-map("n", "<C-j>", ":vertical resize -10<CR>", opt)
-map("n", "<C-l>", ":vertical resize +10<CR>", opt)
-
+map("n", "<A-Left>", ":vertical resize -2 <CR>", opt)
+map("n", "<A-Right>", ":vertical resize +2 <CR>", opt)
+map("n", "<A-h>", ":vertical resize -10<CR>", opt)
+map("n", "<A-l>", ":vertical resize +10<CR>", opt)
 
 --上下比例控制
 map("n", "su", ":resize +10<CR>", opt)
@@ -114,7 +113,7 @@ map("n", "s=", "<C-w>=", opt)
 
 
 --Teminal 相关
-map("n", "st", ":sp | terminal<CR>", opt)
+map("n", "st", ":sp | terminal<CR>  | <i>", opt)
 map("n", "stv", ":vsp |terminal<CR>", opt)
 
 
@@ -124,6 +123,7 @@ map("t", "<A-h>", [[ <C-\><C-N><C-w>h> ]], opt)
 map("t", "<A-j>", [[ <C-\><C-N><C-w>j> ]], opt)
 map("t", "<A-k>", [[ <C-\><C-N><C-w>k> ]], opt)
 map("t", "<A-l>", [[ <C-\><C-N><C-w>l> ]], opt)
+--map("t", "<C-\\>", "<C-\\> :hide", opt)
 
 map("t", "<leader>h", [[ <C-\><C-N><C-w>h> ]], opt)
 map("t", "<leader>j", [[ <C-\><C-N><C-w>j> ]], opt)
@@ -133,13 +133,13 @@ map("t", "<leader>l", [[ <C-\><C-N><C-w>l> ]], opt)
 local plugin_kes = {}
 
 --nvim-tree
-map("n", "<C-m>", ":NvimTreeToggle<CR>", opt)
-map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
+map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
+map("n", "<leader>n", ":NvimTreeToggle<CR>", opt)
 
 -----------------------buffer line------------------
 --left -right tab
-map("n", "<C-l>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-h>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<leader>h", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<leader>l", ":BufferLineCycleNext<CR>", opt)
 
 --关闭
 --moll/vim-bbyte"
@@ -147,3 +147,4 @@ map("n", "<C-c>", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
+--https://dxsm.github.io/books/vimL/z/20170816_3.html

@@ -9,6 +9,7 @@
 --vim.g.tokyonight_transparent_sidebar = true
 --
 local colorscheme = "zellner" 
+--local colorscheme = "tokyonight" 
 --tokyonight
 --OceanicNext
 --gruvbox
