@@ -148,3 +148,36 @@ map("n", "<C-c>", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 --https://dxsm.github.io/books/vimL/z/20170816_3.html
+
+map("n", "<F2>", ":set list! list?<CR>", opt)
+
+
+--Telescope
+--查找文件
+map("n", "<C-f>", ":Telescope find_file<CR>", opt);
+---全局搜索
+map("n", "<C-F>", ":Telescope live_grep<CR>", opt);
+
+local pluginKeys = {};
+--Telescope 列表 插入模式快捷键
+pluginKeys.telescopeList = {
+i = {
+  -- 上下移动
+  ["<C-j>"] = "move_selection_next",
+  ["<C-k>"] = "move_selection_previous",
+  ["<Down>"] = "move_selection_next",
+  ["<UP>"] = "move_selection_previous",
+
+  --历史记录
+  ["<C-n>"] = "cycle_history_next",
+  ["<C-p>"] = "cycle_history_prev",
+
+  --关闭窗口
+  ["<C-c>"] = "close",
+  --预览窗口上下移动
+  ["<C-u>"] = "preview_scrolling_up",
+  ["<C-d>"] = "preview_scrolling_down",
+},
+}
+return pluginKeys;
+

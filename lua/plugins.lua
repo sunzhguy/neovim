@@ -38,11 +38,16 @@ packer.startup({
     -- bufferline 顶部标签显示 
     use({"akinsho/bufferline.nvim", requires = {"kyazdani42/nvim-web-devicons", "moll/vim-bbye"}})
     -- lualine  底部标签显示
-    use({"nvim-lualine/lualine.nvim",requires = {"kyazdani42/nvim-web-devicons"} })
+    use({"nvim-lualine/lualine.nvim", requires = {"kyazdani42/nvim-web-devicons", "moll/vim-bbye"} })
     use("arkav/lualine-lsp-progress")
   
     -- vscode 主题添加
     use("Mofiqul/vscode.nvim")
+
+    --telescope 模糊搜索快速打开文件
+    use{"nvim-telescope/telescope.nvim", requires = {"nvim-lua/plenary.nvim"} }
+    --treesitter
+    use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 
   if packer_bootstrap  then
     packer.sync()

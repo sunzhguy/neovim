@@ -165,3 +165,38 @@ vscode.setup({
 
   })
   --]]
+
+--before use :checkhealth telescope
+local status, telescope = pcall(require, "telescope")
+if not status then
+  vim.notify("没有找到 vscode")
+  return 
+end
+
+telescope.setup({
+  defaults = {
+    --打开弹窗后进入的初始模式， 默认insert, 也可以是normal
+    initial_mode = "insert",
+    --vertgial, center , cursor
+    layout_strategy = "horizontal",
+    --窗口内快捷键
+    mappings = require("keymap").telescopeList,
+  },
+  pickers = {
+    find_files = {
+      --theme = "dropdown", -- 可选参数: dropdown, cursor, ivy
+    },
+  },
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown({
+        --even more opts
+      }),
+    },
+  },
+  })
+
+  pcall(telescope.load_extension, "env")
+  pcall(telescope.load_extension, "ui-select")
+
+
