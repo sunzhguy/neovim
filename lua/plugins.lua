@@ -66,10 +66,11 @@ packer.startup({
     use("hrsh7th/nvim-cmp")
 
 	--ui 增强
-
     use("onsails/lspkind-nvim")
 	use("tami5/lspsaga.nvim")
-
+	
+	use({ "akinsho/toggleterm.nvim" })
+	
 
   if packer_bootstrap  then
     packer.sync()

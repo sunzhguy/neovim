@@ -4,6 +4,7 @@ require('plugins')
 require('colorscheme')
 require('plugins-config')
 require("lsp.setup")
+require("lsp.ui");
 
 
 --启用主题
