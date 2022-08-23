@@ -157,7 +157,10 @@ map("n", "<F2>", ":set list! list?<CR>", opt)
 map("n", "<S-g>", ":Telescope git_files<CR>", opt);
 map("n", "<S-f>", ":Telescope find_files<CR>", opt);
 ---全局搜索
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt);
+map("n", "<C-g>", ":Telescope live_grep<CR>", opt);
+
+--当前文件搜索
+map("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>", opt)
 
 
 
