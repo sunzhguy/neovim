@@ -40,15 +40,29 @@ packer.startup({
     -- lualine  底部标签显示
     use({"nvim-lualine/lualine.nvim", requires = {"kyazdani42/nvim-web-devicons", "moll/vim-bbye"} })
     use("arkav/lualine-lsp-progress")
+	use("rmehri01/onenord.nvim")
   
     -- vscode 主题添加
     use("Mofiqul/vscode.nvim")
+	-- tokyonight.nvim
+	use("folke/tokyonight.nvim")
 
     --telescope 模糊搜索快速打开文件
     use{"nvim-telescope/telescope.nvim", requires = {"nvim-lua/plenary.nvim"} }
     --treesitter
     use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-
+	
+	-------------------------------LSP----------------------------
+    use("williamboman/nvim-lsp-installer")
+	--Lspconfig
+	use({"neovim/nvim-lspconfig"})
+	--cmp nvim lsp
+	use("hrsh7th/cmp-nvim-lsp")
+	use("b0o/schemastore.nvim")
+    --lua dev
+	use("folke/lua-dev.nvim")
+	--nvim-cmp-- 补全引擎
+    use("hrsh7th/nvim-cmp")
   if packer_bootstrap  then
     packer.sync()
   end
