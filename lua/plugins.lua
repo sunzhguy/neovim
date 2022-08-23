@@ -51,7 +51,8 @@ packer.startup({
     use{"nvim-telescope/telescope.nvim", requires = {"nvim-lua/plenary.nvim"} }
     --treesitter
     use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-	
+	--indent-blankline
+	use("lukas-reineke/indent-blankline.nvim");
 	-------------------------------LSP----------------------------
     use("williamboman/nvim-lsp-installer")
 	--Lspconfig
@@ -63,6 +64,13 @@ packer.startup({
 	use("folke/lua-dev.nvim")
 	--nvim-cmp-- 补全引擎
     use("hrsh7th/nvim-cmp")
+
+	--ui 增强
+
+    use("onsails/lspkind-nvim")
+	use("tami5/lspsaga.nvim")
+
+
   if packer_bootstrap  then
     packer.sync()
   end
