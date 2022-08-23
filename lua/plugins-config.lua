@@ -48,9 +48,9 @@ nvim_tree.setup({
     },
     -- wsl install -g wsl-open
     -- https://github.com/4U6U57/wsl-open/
-    system_open = {
-        cmd = 'wsl-open', -- mac 直接设置为 open
-    },
+    --system_open = {
+    --    cmd = 'wsl-open', -- mac 直接设置为 open
+    --},
 })
 -- 自动关闭
 vim.cmd([[
