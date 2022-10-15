@@ -150,20 +150,20 @@ pluginKeys.nvimTreeList = { -- 打开文件或文件夹
   { key = "R", action = "refresh" },
   -- 文件操作
   { key = "a", action = "create" },
-  { key = "d", action = "remove" },
+  --{ key = "d", action = "remove" },
   { key = "r", action = "rename" },
   { key = "x", action = "cut" },
   { key = "c", action = "copy" },
-  { key = "p", action = "paste" },
+  --{ key = "p", action = "paste" },
   { key = "y", action = "copy_name" },
   { key = "Y", action = "copy_path" },
   { key = "gy", action = "copy_absolute_path" },
   { key = "I", action = "toggle_file_info" },
-  { key = "n", action = "tabnew" },
+  --{ key = "n", action = "tabnew" },
   -- 进入下一级
-  { key = { "]" }, action = "cd" },
+  --{ key = { "]" }, action = "cd" },
   -- 进入上一级
-  { key = { "[" }, action = "dir_up" },
+  --{ key = { "[" }, action = "dir_up" },
   { key = "s", action = "" },
 }
 
