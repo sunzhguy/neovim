@@ -181,7 +181,7 @@ map("n", "sc", ":Bdelete!<CR>", opt)
 --https://dxsm.github.io/books/vimL/z/20170816_3.html
 
 map("n", "<F2>", ":set list! list?<CR>", opt)
-
+map("n", "<F3>", ":set expandtab! expandtab?<CR>", opt)
 
 --Telescope
 --查找文件
